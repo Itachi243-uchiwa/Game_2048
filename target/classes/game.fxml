@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="be.esi.prj.game_2048.controller.GameController"
+      spacing="15"
+      stylesheets="@styles.css"
+      styleClass="game-container"
+      fx:id="gameContainer">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- Header with title and score -->
+    <HBox spacing="15" alignment="CENTER_LEFT" styleClass="header">
+        <Label text="2048" styleClass="game-title"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <VBox styleClass="score-container" alignment="CENTER">
+            <Label text="SCORE" styleClass="score-header"/>
+            <Label fx:id="scoreLabel" styleClass="score-value"/>
+        </VBox>
+    </HBox>
+
+    <!-- Controls -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Button text="New Game" onAction="#handleRestart" styleClass="control-button"/>
+        <Region HBox.hgrow="ALWAYS"/>
+    </HBox>
+
+    <!-- Game Description -->
+    <Label text="Join the tiles, get to 2048!" styleClass="game-description"/>
+
+    <!-- Game grid with drop shadow effect - Now larger and centered -->
+    <StackPane styleClass="game-grid-container" VBox.vgrow="ALWAYS">
+        <effect>
+            <DropShadow radius="10" offsetY="3" color="#00000033"/>
+        </effect>
+        <GridPane fx:id="gameGrid" styleClass="game-grid"
+                  hgap="10" vgap="10"
+                  alignment="CENTER"
+                  maxWidth="Infinity" maxHeight="Infinity"/>
+    </StackPane>
+
+    <!-- Game status -->
+    <Label fx:id="gameStatusLabel" styleClass="status-label" alignment="CENTER"/>
+
+    <!-- Game Over Panel (hidden by default) -->
+    <VBox fx:id="gameOverPanel" styleClass="game-over-panel" visible="false" managed="false" alignment="CENTER" spacing="15">
+        <Label text="Game Over!" styleClass="game-over-title"/>
+        <Label fx:id="finalScoreLabel" styleClass="final-score"/>
+        <Button text="Try Again" onAction="#handleRestart" styleClass="try-again-button"/>
+    </VBox>
+
+    <!-- Instructions -->
+    <VBox styleClass="instructions-panel" spacing="8">
+        <Label text="HOW TO PLAY" styleClass="instructions-header"/>
+        <Label text="Use arrow keys to move the tiles. When two tiles with the same number touch, they merge into one!"
+               styleClass="instructions-text" wrapText="true"/>
+    </VBox>
+</VBox>

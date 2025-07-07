@@ -1,0 +1,225 @@
+/* Root container styles */
+.game-container {
+    -fx-background-color: #faf8ef;
+    -fx-font-family: 'Arial', sans-serif;
+    -fx-alignment: center;
+    -fx-max-width: 600px;
+    -fx-min-width: 400px;
+}
+
+/* Header styles */
+.header {
+    -fx-padding: 0 0 15 0;
+}
+
+.game-title {
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #776e65;
+}
+
+.score-container {
+    -fx-background-color: #bbada0;
+    -fx-background-radius: 6;
+    -fx-padding: 10 15;
+    -fx-min-width: 100;
+    -fx-alignment: center;
+}
+
+.score-header {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: rgba(255, 255, 255, 0.7);
+}
+
+.score-value {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+/* Control buttons */
+.control-button {
+    -fx-background-color: #8f7a66;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+
+.control-button:hover {
+    -fx-background-color: #7f6a56;
+}
+
+/* Game description */
+.game-description {
+    -fx-font-size: 18px;
+    -fx-text-fill: #776e65;
+    -fx-padding: 0 0 10 0;
+}
+
+/* Game grid styles */
+.game-grid-container {
+    -fx-padding: 15;
+}
+
+.game-grid {
+    -fx-background-color: #bbada0;
+    -fx-background-radius: 6;
+    -fx-padding: 15;
+    -fx-alignment: center;
+    -fx-hgap: 15;
+    -fx-vgap: 15;
+}
+
+/* Tile styles - Add these class styles for each tile value */
+.tile {
+    -fx-background-radius: 6;
+    -fx-min-width: 80;
+    -fx-min-height: 80;
+    -fx-alignment: center;
+    -fx-font-weight: bold;
+    -fx-font-size: 32px;
+    -fx-border-color:#7f6a56;
+    -fx-border-radius: 6;
+}
+
+.tile-empty {
+    -fx-background-color: rgba(238, 228, 218, 0.35);
+}
+
+.tile-2 {
+    -fx-background-color: #eee4da;
+    -fx-text-fill: #776e65;
+}
+
+.tile-4 {
+    -fx-background-color: #ede0c8;
+    -fx-text-fill: #776e65;
+}
+
+.tile-8 {
+    -fx-background-color: #f2b179;
+    -fx-text-fill: white;
+}
+
+.tile-16 {
+    -fx-background-color: #f59563;
+    -fx-text-fill: white;
+}
+
+.tile-32 {
+    -fx-background-color: #f67c5f;
+    -fx-text-fill: white;
+}
+
+.tile-64 {
+    -fx-background-color: #f65e3b;
+    -fx-text-fill: white;
+}
+
+.tile-128 {
+    -fx-background-color: #edcf72;
+    -fx-text-fill: white;
+    -fx-font-size: 28px;
+}
+
+.tile-256 {
+    -fx-background-color: #edcc61;
+    -fx-text-fill: white;
+    -fx-font-size: 28px;
+}
+
+.tile-512 {
+    -fx-background-color: #edc850;
+    -fx-text-fill: white;
+    -fx-font-size: 28px;
+}
+
+.tile-1024 {
+    -fx-background-color: #edc53f;
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+}
+
+.tile-2048 {
+    -fx-background-color: #edc22e;
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+}
+
+/* Status label */
+.status-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #776e65;
+    -fx-padding: 10 0;
+}
+
+/* Game over panel */
+.game-over-panel {
+    -fx-background-color: rgba(238, 228, 218, 0.9);
+    -fx-background-radius: 6;
+    -fx-padding: 30;
+    -fx-spacing: 15;
+}
+
+.game-over-title {
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #776e65;
+}
+
+.final-score {
+    -fx-font-size: 24px;
+    -fx-text-fill: #776e65;
+}
+
+.try-again-button {
+    -fx-background-color: #8f7a66;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 15 30;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+
+.try-again-button:hover {
+    -fx-background-color: #7f6a56;
+}
+
+/* Instructions panel */
+.instructions-panel {
+    -fx-background-color: rgba(238, 228, 218, 0.5);
+    -fx-background-radius: 6;
+    -fx-padding: 15;
+    -fx-spacing: 10;
+}
+
+.instructions-header {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #776e65;
+}
+
+.instructions-text {
+    -fx-font-size: 14px;
+    -fx-text-fill: #776e65;
+    -fx-wrap-text: true;
+    -fx-line-spacing: 1.2;
+}
+
+/* Animations */
+.tile {
+    -fx-transition: all 0.15s ease-in-out;
+}
+
+/* Hover effects */
+.control-button:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2);
+}
+
+/* Focus styles */
+.control-button:focused {
+    -fx-effect: dropshadow(gaussian, #8f7a66, 10, 0, 0, 0);
+}

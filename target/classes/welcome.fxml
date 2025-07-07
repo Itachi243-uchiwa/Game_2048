@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.geometry.Insets?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="be.esi.prj.game_2048.controller.WelcomeController"
+           stylesheets="@styleWelcome.css"
+           styleClass="welcome-container">
+
+    <VBox alignment="CENTER" spacing="25" styleClass="welcome-box">
+        <padding>
+            <Insets top="30" right="30" bottom="30" left="30"/>
+        </padding>
+
+        <!-- Logo and Title -->
+        <VBox alignment="CENTER" spacing="15">
+            <Label text="2048" styleClass="welcome-title"/>
+            <Label text="Glissez. Fusionnez. Atteignez 2048!" styleClass="welcome-subtitle"/>
+        </VBox>
+
+        <!-- Démo avec 4 tuiles animées -->
+        <StackPane styleClass="preview-container">
+            <effect>
+                <DropShadow radius="10" offsetY="3" color="#00000033"/>
+            </effect>
+            <VBox alignment="CENTER" spacing="15">
+                <Label text="Démonstration" styleClass="demo-title"/>
+
+                <!-- Grille de démonstration avec 4 tuiles (2x2) -->
+                <GridPane fx:id="demoGrid"
+                          hgap="10" vgap="10"
+                          alignment="CENTER"
+                          styleClass="demo-grid">
+                    <!-- Les tuiles seront ajoutées dynamiquement -->
+                </GridPane>
+            </VBox>
+        </StackPane>
+
+        <!-- Bouton Jouer -->
+        <Button text="JOUER" onAction="#startGame" styleClass="play-button"/>
+
+        <!-- Options (futures fonctionnalités) -->
+        <HBox alignment="CENTER" spacing="15">
+            <Button text="Options" onAction="#showOptions" styleClass="secondary-button" disable="true"/>
+            <Button text="Scores" onAction="#showHighScores" styleClass="secondary-button" disable="true"/>
+        </HBox>
+
+        <!-- Information développeur -->
+        <VBox alignment="CENTER" spacing="5" styleClass="developer-info">
+            <Label text="Développé par" styleClass="developer-label"/>
+            <Label fx:id="developerNameLabel" text="Votre Nom" styleClass="developer-name"/>
+            <Label text="© 2025" styleClass="copyright-text"/>
+        </VBox>
+    </VBox>
+</StackPane>

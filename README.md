@@ -21,3 +21,44 @@ Projet personnel réalisé en Java, ce 2048 propose une architecture propre, une
 
 ## 📁 Structure
 
+2048/
+├── src/
+│ ├── main/
+│ │ ├── java/
+│ │ │ ├── model/ # Logique du jeu (grille, tuiles)
+│ │ │ ├── view/ # Chargement FXML
+│ │ │ └── controller/ # Gestion des événements clavier
+│ │ └── resources/
+│ │ └── fxml/ # Interfaces FXML
+├── pom.xml # Dépendances et configuration Maven
+└── README.md
+
+
+## 🧱 Technologies
+
+- Java 17+
+- JavaFX 20+
+- FXML
+- Maven
+
+## 🚀 Installation et exécution
+
+```bash
+git clone https://github.com/Itachi243-uchiwa/2048-javafx.git
+cd 2048-javafx
+mvn clean install
+mvn javafx:run
+
+🧪 Ce que j’ai appris
+
+    Créer une application Java propre et modulaire
+
+    Maîtriser FXML pour séparer vue et logique
+
+    Appliquer MVC, Observer, Factory avec rigueur
+
+    Gérer événements clavier et interface responsive
+
+📜 Licence
+
+Ce projet est sous licence MIT.

@@ -61,14 +61,3 @@ mvn javafx:run
 
 Ce projet est sous licence MIT.
 
-````
-
----
-
-✅ Le bloc `bash` était mal clôturé (` ```bash` à la fin au lieu de ` ``` `)  
-✅ Les listes d'apprentissages ont été converties en puces Markdown  
-✅ L’espacement et l'encodage sont corrigés pour être lisibles sur GitHub
-
-Souhaites-tu que je te livre un **fichier `README.md` complet prêt à déposer** dans ton dépôt GitHub ?
-````
-
